@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      Highland - A Discussion Box
+    </title>
+
+    <link href="/static/index.css" rel="stylesheet">
+    <link href="/static/img/dialup2.gif" rel="shortcut icon">
+
+    <link href="https://codesalvageon.github.io/magichat/styles/hover.css" rel="stylesheet">
+    <link href="https://codesalvageon.github.io/magichat/styles/inhover.css" rel="stylesheet">
+  </head>
+  <body class="hover">
+    <p class="large header">
+      Highland
+    </p>
+    <br/>
+    <p id="highland-status"></p>
+    <form id="highland-form" class="mid header" autocomplete="off">
+      <p>Set User: <input type="text" class="text-input" required maxlength="50" id="user"/></p>
+      <p>Message: <input type="text" class="text-input" required maxlength="300" id="msg"></p>
+      <button>
+        Post Message to Board
+      </button>
+    </form>
+    <section id="messages">
+    </section>
+    
+    <script src="/static/index.js"></script>
+  </body>
+</html>
