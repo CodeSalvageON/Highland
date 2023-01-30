@@ -97,6 +97,7 @@ highlandForm.onsubmit = function () {
   .then(response => response.text())
   .then(data => {
     console.log(data);
+    msg.value = "";
   })
   .catch(error => {
     throw error;
@@ -121,3 +122,20 @@ setInterval(function () {
     throw error;
   });
 }, 5000);
+
+fetch ("/getstuff", {
+  method : "POST",
+  headers : {
+    "Content-Type" : "application/json"
+  },
+  body : JSON.stringify({
+    room : roomID
+  })
+})
+.then(response => response.text())
+.then(data => {
+  messages.innerHTML = data;
+})
+.catch(error => {
+  throw error;
+});

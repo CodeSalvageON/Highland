@@ -68,4 +68,5 @@ button {
   width: 45%;
   height: 100%;
   position: absolute;
+  overflow-y: auto;
 }
